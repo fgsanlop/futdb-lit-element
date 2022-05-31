@@ -33,7 +33,7 @@ export class ApiData extends LitElement {
                     'X-AUTH-TOKEN': env.apiKey                    
                 }
             });
-            const json = await response.json();
+            const json = await response.json();            
             this._requestEventHandler(json);
         } catch (error) {
             console.error(error)

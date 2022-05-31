@@ -5,7 +5,7 @@ export class ApiImage extends LitElement {
     static get properties() {
         return {
             type: { type: String },
-            id: { type: Number },
+            id: { type: Number, attribute: 'item-id' },
             url: { attribute: false }
         }
     }
@@ -33,8 +33,7 @@ export class ApiImage extends LitElement {
                 }
             });
             const blobImg = await response.blob();
-            const imgObjURL = await URL.createObjectURL(blobImg);
-            console.log(imgObjURL);
+            const imgObjURL = URL.createObjectURL(blobImg);            
             return imgObjURL;
         } catch (error) {
             console.error(error);

@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit';
 import './components/player-card';
 import './components/highest-rated';
-//import './components/has-changed-test';
+import './components/has-changed-test';
 
 export class FutDb extends LitElement {
   static get properties() {
@@ -21,7 +21,7 @@ export class FutDb extends LitElement {
     return html`
       <main>
         <h1>${this.title}</h1>
-        <highest-rated></highest-rated>
+        <highest-rated></highest-rated>        
       </main>
     `;
   }
